@@ -42,7 +42,8 @@ export default function Header({ children }: React.PropsWithChildren) {
                         key={ page.label }
                         href={ page.route }
                         fontSize="10px"
-                        sx={{ m: 1, color: 'white' }}
+                        sx={{ m: 1 }}
+                        color="inherit"
                         underline="hover"
                     >
                         { page.label }
