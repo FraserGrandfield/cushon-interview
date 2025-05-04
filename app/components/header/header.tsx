@@ -17,13 +17,20 @@ const pages: Pages[] = [
     }
 ];
 
+/**
+ * Renders the header at the top of the screen.
+ * This contains link to the home page, indvidual isa and workplace isa page.
+ * 
+ * @param { React.PropsWithChildren } children
+ * @returns A React element that renders the header.
+ */
 export default function Header({ children }: React.PropsWithChildren) {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" style={{ backgroundColor: "var(--primary-backround)" }}>
-                <Toolbar disableGutters>
+                <Toolbar>
                 <img
-                    style={{ width: "30px", padding: "10px 2px" }}
+                    style={{ width: "50px", padding: "10px 2px" }}
                     src={ logo }
                     alt="Natwest logo"
                 />
@@ -31,7 +38,7 @@ export default function Header({ children }: React.PropsWithChildren) {
                     <Link
                         color="inherit"
                         href="/"
-                        sx={{ fontWeight: 700 }}
+                        sx={{ fontWeight: 700, fontSize: "40px" }}
                         underline="hover"
                     >
                         NatWest Cushon
@@ -41,7 +48,6 @@ export default function Header({ children }: React.PropsWithChildren) {
                     <Link
                         key={ page.label }
                         href={ page.route }
-                        fontSize="10px"
                         sx={{ m: 1 }}
                         color="inherit"
                         underline="hover"
