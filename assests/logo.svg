@@ -1,0 +1,98 @@
+<svg version="1.1" id="Layer_1" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 61.9 62" style="enable-background:new 0 0 61.9 62;" xml:space="preserve">
+ <style type="text/css">
+  .st0{fill:#3C1053;}
+	.st1{fill:#BF5CFF;}
+	.st2{fill:#8F52D1;}
+	.st3{fill:url(#Path_1_);}
+	.st4{fill:url(#Path_2_);}
+	.st5{fill:url(#Path_9_);}
+ </style>
+ <metadata>
+  <sfw xmlns="ns_sfw;">
+   <slices>
+   </slices>
+   <sliceSourceBounds bottomLeftOrigin="true" height="62" width="61.9" x="1" y="0">
+   </sliceSourceBounds>
+  </sfw>
+ </metadata>
+ <g id="Symbols">
+  <g id="Logo_x2F_Wh_x2F_NatWestGroup-Hor">
+   <g id="NWG_Horizontal_RGB_NEG" transform="translate(1.000000, 0.000000)">
+    <g id="Group_1_">
+     <path id="Path_3_" class="st0" d="M60.9,31c0,28.8-2.2,31-30.9,31S-1,59.8-1,31S1.2,0,29.9,0S60.9,2.2,60.9,31z">
+     </path>
+     <g id="Path_4_" transform="translate(9.432288, 11.174419)">
+      <polygon class="st1" points="29.8,26.7 17.5,26.7 23.6,37.4 36,37.4 36,37.4 36,37.4 					">
+      </polygon>
+      <polygon class="st1" points="26.7,0 26.7,0 14.4,0 8.2,10.7 20.6,10.7 20.6,10.7 					">
+      </polygon>
+      <polygon class="st1" points="11.3,26.7 11.3,26.7 17.5,16 5.2,16 -1,26.7 -1,26.7 -1,26.7 					">
+      </polygon>
+     </g>
+     <g id="Path_5_" transform="translate(9.432288, 11.174419)">
+      <polygon class="st2" points="36,16 42.1,26.7 36,37.4 29.8,26.7 					">
+      </polygon>
+      <polygon class="st2" points="20.6,10.7 26.7,21.4 32.9,10.7 26.7,0 					">
+      </polygon>
+      <polygon class="st2" points="17.5,37.4 17.5,37.4 5.2,37.4 -1,26.7 -1,26.7 11.3,26.7 					">
+      </polygon>
+     </g>
+     <linearGradient id="Path_1_" gradientUnits="userSpaceOnUse" x1="-66.0687" y1="215.851" x2="-65.5684" y2="215.6837" gradientTransform="matrix(18.4702 0 0 -10.6784 1251.8311 2336.5996)">
+      <stop offset="0" style="stop-color:#BF5CFF;stop-opacity:0">
+      </stop>
+      <stop offset="9.999999e-02" style="stop-color:#BF5CFF;stop-opacity:0.12">
+      </stop>
+      <stop offset="0.35" style="stop-color:#BF5CFF;stop-opacity:0.4">
+      </stop>
+      <stop offset="0.57" style="stop-color:#BF5CFF;stop-opacity:0.61">
+      </stop>
+      <stop offset="0.76" style="stop-color:#BF5CFF;stop-opacity:0.77">
+      </stop>
+      <stop offset="0.91" style="stop-color:#BF5CFF;stop-opacity:0.86">
+      </stop>
+      <stop offset="1" style="stop-color:#BF5CFF;stop-opacity:0.9">
+      </stop>
+     </linearGradient>
+     <polygon id="Path_6_" class="st3" points="39.2,27.2 36.1,32.5 30,32.5 30,32.5 26.9,37.9 39.2,37.9 45.4,27.2 				">
+     </polygon>
+     <linearGradient id="Path_2_" gradientUnits="userSpaceOnUse" x1="-65.6073" y1="215.928" x2="-65.9561" y2="215.6871" gradientTransform="matrix(18.4702 0 0 -10.6885 1242.5933 2333.5874)">
+      <stop offset="0" style="stop-color:#BF5CFF;stop-opacity:0">
+      </stop>
+      <stop offset="9.999999e-02" style="stop-color:#BF5CFF;stop-opacity:0.12">
+      </stop>
+      <stop offset="0.35" style="stop-color:#BF5CFF;stop-opacity:0.4">
+      </stop>
+      <stop offset="0.57" style="stop-color:#BF5CFF;stop-opacity:0.61">
+      </stop>
+      <stop offset="0.76" style="stop-color:#BF5CFF;stop-opacity:0.77">
+      </stop>
+      <stop offset="0.91" style="stop-color:#BF5CFF;stop-opacity:0.86">
+      </stop>
+      <stop offset="1" style="stop-color:#BF5CFF;stop-opacity:0.9">
+      </stop>
+     </linearGradient>
+     <polygon id="Path_7_" class="st4" points="20.8,27.2 26.9,27.2 30,32.5 30,32.5 36.1,32.5 30,21.9 17.7,21.9 				">
+     </polygon>
+     <linearGradient id="Path_9_" gradientUnits="userSpaceOnUse" x1="-62.1879" y1="223.8592" x2="-61.9754" y2="223.4459" gradientTransform="matrix(9.238 0 0 -21.3713 599.4102 4817.3364)">
+      <stop offset="0" style="stop-color:#BF5CFF;stop-opacity:0">
+      </stop>
+      <stop offset="9.999999e-02" style="stop-color:#BF5CFF;stop-opacity:0.12">
+      </stop>
+      <stop offset="0.35" style="stop-color:#BF5CFF;stop-opacity:0.4">
+      </stop>
+      <stop offset="0.57" style="stop-color:#BF5CFF;stop-opacity:0.61">
+      </stop>
+      <stop offset="0.76" style="stop-color:#BF5CFF;stop-opacity:0.77">
+      </stop>
+      <stop offset="0.91" style="stop-color:#BF5CFF;stop-opacity:0.86">
+      </stop>
+      <stop offset="1" style="stop-color:#BF5CFF;stop-opacity:0.9">
+      </stop>
+     </linearGradient>
+     <polygon id="Path_8_" class="st5" points="30,43.2 26.9,37.9 30,32.5 30,32.5 26.9,27.2 20.8,37.9 26.9,48.6 				">
+     </polygon>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
