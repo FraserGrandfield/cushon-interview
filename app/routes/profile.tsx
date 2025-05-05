@@ -3,7 +3,7 @@ import { getUserById, UserFund } from "~/api";
 import FullScreenSpinnerContainer from "~/components/common/full-screen-spinner-container/full-screen-spinner-container";
 import Header from "~/components/common/header/header";
 import LoadingSpinner from "~/components/common/loading-spinner/loading-spinner";
-import ProfileFunds from "~/components/profile/profile-funds";
+import ProfileFunds from "~/components/profile/profile-funds/profile-funds";
 
 /**
  * Profile page.
