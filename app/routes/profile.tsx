@@ -7,9 +7,11 @@ import ProfileFunds from "~/components/profile/profile-funds";
 
 export default function Profile() {
     const [userFunds, setUserFunds] = useState([] as UserFund[]);
+    const [isLoading, setIsLoading] = useState(true);
 
     const loadUser = async () => {
-        const userResponse = await getUserById("3910ce07-4462-4782-b388-670c8dd37164");
+        const userResponse = await getUserById("3910ce07-4462-4782-b388-670c8dd37164")
+        setIsLoading(false)
         setUserFunds(userResponse.funds);
     }
 
@@ -19,7 +21,7 @@ export default function Profile() {
 
     return (
         <Header>
-            {!userFunds.length ?
+            {isLoading ?
             <FullScreenSpinnerContainer>
                 <LoadingSpinner size={"250px"}/>
             </FullScreenSpinnerContainer> :

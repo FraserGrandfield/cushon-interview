@@ -39,8 +39,10 @@ export default function SelectISAStepper({ funds }: SelectISAStepperProps) {
     const onSubmit = () => {
         setIsLoading(true);
         setUserFund("3910ce07-4462-4782-b388-670c8dd37164", selectedFund.id, selectedFund.amount)
-            .then(() => setIsLoading(false));
-        document.location.href="/";
+            .then(() => {
+                setIsLoading(false);
+                document.location.href="/";
+            });
     }
 
     const handleNext = () => {
