@@ -1,5 +1,13 @@
 # Cushon interview
 
+This project uses the following:
+
+* React - version `19.1.0`
+* React Router - version `7.5.3` for the framework and routing
+* Material UI - version `7.0.2` for components and icons
+* Tailwind - version `4.1.4` for styling
+* Jest and React Testing Library - version `29.7.0` and `16.3.0` for testing
+
 ## Getting Started
 
 ### Prerequisites
