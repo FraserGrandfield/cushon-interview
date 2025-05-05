@@ -5,6 +5,7 @@ import SelectISATabs from "../select-isa-tabs/select-isa-tabs";
 import SelectISAAmountInfo from "../select-isa-amount-info.tsx/select-isa-amount-info";
 import SelectISAAmountInput from "../select-isa-amount-input/select-isa-amount-input";
 import SelectISAReview from "../select-isa-review";
+import LoadingSpinner from "../loading-spinner/loading-spinner";
 
 const steps = ['Select an ISA fund', 'Choose amount to invest', 'Review'];
 
@@ -33,10 +34,18 @@ export interface SelectedFundProps {
 export default function SelectISAStepper({ funds }: SelectISAStepperProps) {
     const [activeStep, setActiveStep] = useState(0);
     const [selectedFund, setSelectedFund] = useState({ id: "", amount: 0, error: "" });
+    const [isLoading, setIsLoading] = useState(false);
+
+    const onSubmit = () => {
+        setIsLoading(true);
+        setFund("3910ce07-4462-4782-b388-670c8dd37164", selectedFund.id, selectedFund.amount)
+            .then(() => setIsLoading(false));
+        document.location.href="/";
+    }
 
     const handleNext = () => {
         if (activeStep ===  steps.length - 1) {
-            setFund("3910ce07-4462-4782-b388-670c8dd37164", selectedFund.id, selectedFund.amount);
+            onSubmit();
             return;
         }
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -73,6 +82,18 @@ export default function SelectISAStepper({ funds }: SelectISAStepperProps) {
         return false;
     }
 
+    const renderNextButtonInnerHTML = () => {
+        if (isLoading) {
+            return (
+                <LoadingSpinner size="20px" color="white"/>
+            )
+        }
+        if (activeStep === steps.length - 1) {
+            return "submit";
+        }
+        return "next";
+    }
+
     return (
         <Box sx={{ width: "100%" }}>
             <Stepper activeStep={ activeStep } sx={{ p: "30px 50px" }}>
@@ -97,7 +118,7 @@ export default function SelectISAStepper({ funds }: SelectISAStepperProps) {
                 </Button>
                 <Box sx={{ flex: '1 1 auto' }} />
                 <Button onClick={ handleNext } disabled={ isNextDisabled() } variant="contained">
-                    { activeStep === steps.length - 1 ? 'Submit' : 'Next' }
+                    { renderNextButtonInnerHTML() }
                 </Button>
             </Box>
             { renderStepperPages() }
