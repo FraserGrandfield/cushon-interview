@@ -1,5 +1,5 @@
 import { UserFund } from "~/api";
-import ProfileFundCard from "./profile-fund-card";
+import ProfileFundCard from "./profile-fund-card/profile-fund-card";
 
 /**
  * Renders a users funds, how much they have invested and how much its worth
