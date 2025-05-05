@@ -21,8 +21,18 @@ Start the development server with HMR:
 ```bash
 npm run dev
 ```
-
 Your application will be available at `http://localhost:5173`.
+
+### Testing
+
+The tests use Jest and React Testing Library. Start the tests with:
+```bash
+npm run test
+```
+or to run them in watch mode:
+```bash
+npm run test -- --watch
+```
 
 ## Building for Production
 
