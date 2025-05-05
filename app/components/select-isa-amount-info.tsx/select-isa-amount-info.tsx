@@ -1,5 +1,6 @@
 import { Card, CardContent, Divider } from "@mui/material"
 import { Fund } from "~/api"
+import SelectedFundsInfo from "../selected-funds-info";
 
 interface SelectISAAmountInfoProps {
     children: React.ReactNode;
@@ -21,12 +22,7 @@ export default function SelectISAAmountInfo({ children, fund }: SelectISAAmountI
                     { children }
                     <p className="text-xs text-muted-foreground">ISA allowance: up to £20,000 per tax year</p>
                     <Divider sx={{ margin: "20px 5px" }}/>
-                    <div>
-                        <h4 className="text-sm font-medium mb-2">Your fund selection:</h4>
-                        <ul className="text-sm">
-                            <li key={fund.id}>{ fund.label }</li>
-                        </ul>
-                    </div>
+                    <SelectedFundsInfo fund={ fund }/>
                 </CardContent>
             </Card>
         </div>

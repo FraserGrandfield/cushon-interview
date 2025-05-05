@@ -4,6 +4,7 @@ import { Fund, setFund } from "~/api";
 import SelectISATabs from "../select-isa-tabs/select-isa-tabs";
 import SelectISAAmountInfo from "../select-isa-amount-info.tsx/select-isa-amount-info";
 import SelectISAAmountInput from "../select-isa-amount-input/select-isa-amount-input";
+import SelectISAReview from "../select-isa-review";
 
 const steps = ['Select an ISA fund', 'Choose amount to invest', 'Review'];
 
@@ -34,7 +35,6 @@ export default function SelectISAStepper({ funds }: SelectISAStepperProps) {
     const [selectedFund, setSelectedFund] = useState({ id: "", amount: 0, error: "" });
 
     const handleNext = () => {
-        //Todo: update fund in here
         if (activeStep ===  steps.length - 1) {
             setFund("3910ce07-4462-4782-b388-670c8dd37164", selectedFund.id, selectedFund.amount);
             return;
@@ -47,16 +47,19 @@ export default function SelectISAStepper({ funds }: SelectISAStepperProps) {
     };
 
     const renderStepperPages = () => {
+        const fund = funds.find(f => f.id === selectedFund.id)!;
         switch(activeStep) {
             case 0:
                 return(<SelectISATabs selectedFund={ selectedFund } setSelectedFund={ setSelectedFund } funds={ funds }/>);
             case 1:
-                const fund = funds.find(f => f.id === selectedFund.id)!;
+                
                 return (
-                    <SelectISAAmountInfo fund={fund}>
+                    <SelectISAAmountInfo fund={ fund }>
                         <SelectISAAmountInput selectedFund={ selectedFund } setSelectedFund={ setSelectedFund }/>
                     </SelectISAAmountInfo>
                 );
+            case 2:
+                return (<SelectISAReview selectedFund={ selectedFund } fund={ fund }/>);
         }
     }
 
