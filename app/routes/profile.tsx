@@ -5,6 +5,12 @@ import Header from "~/components/common/header/header";
 import LoadingSpinner from "~/components/common/loading-spinner/loading-spinner";
 import ProfileFunds from "~/components/profile/profile-funds";
 
+/**
+ * Profile page.
+ * Page where a user can view the funds they have invested in.
+ * 
+ * @returns A React element that renders the  page.
+ */
 export default function Profile() {
     const [userFunds, setUserFunds] = useState([] as UserFund[]);
     const [isLoading, setIsLoading] = useState(true);
