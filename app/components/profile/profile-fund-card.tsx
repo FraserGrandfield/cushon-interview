@@ -1,4 +1,4 @@
-import { Card, CardContent, Divider, Typography } from "@mui/material";
+import { Card, CardContent, Typography } from "@mui/material";
 import { getFundById, UserFund } from "~/api";
 import { useEffect, useState } from "react";
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getFundById, getUserById, UserFund } from "~/api";
+import { getUserById, UserFund } from "~/api";
 import FullScreenSpinnerContainer from "~/components/common/full-screen-spinner-container/full-screen-spinner-container";
 import Header from "~/components/common/header/header";
 import LoadingSpinner from "~/components/common/loading-spinner/loading-spinner";
@@ -10,8 +10,8 @@ export default function Profile() {
     const [isLoading, setIsLoading] = useState(true);
 
     const loadUser = async () => {
-        const userResponse = await getUserById("3910ce07-4462-4782-b388-670c8dd37164")
-        setIsLoading(false)
+        const userResponse = await getUserById("3910ce07-4462-4782-b388-670c8dd37164");
+        setIsLoading(false);
         setUserFunds(userResponse.funds);
     }
 
