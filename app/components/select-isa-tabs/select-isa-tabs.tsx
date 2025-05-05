@@ -1,10 +1,10 @@
 import { Box, Tabs, Tab } from "@mui/material";
 import { useState } from "react";
 import { Fund } from "~/api";
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import { SelectedFundProps } from "../select-isa-stepper/select-isa-stepper";
 import SelectISAFundInfo from "../select-isa-fund-info/select-isa-fund-info";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 
 interface SelectISATabsProps extends SelectedFundProps {
     funds: Fund[]
@@ -73,7 +73,7 @@ export default function SelectISATabs({ selectedFund, setSelectedFund, funds }: 
             >
                 {funds.map((fund, index) => (
                     <Tab
-                        icon={fund.id === selectedFund.id ? <CheckBoxIcon/> : <CheckBoxOutlineBlankIcon/>}
+                        icon={fund.id === selectedFund.id ? <CheckCircleIcon/> : <PanoramaFishEyeIcon/>}
                         label={fund.label}
                         { ...a11yProps(index) }
                         key={ fund.label }
