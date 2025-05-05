@@ -4,8 +4,8 @@ import { Fund, setFund } from "~/api";
 import SelectISATabs from "../select-isa-tabs/select-isa-tabs";
 import SelectISAAmountInfo from "../select-isa-amount-info.tsx/select-isa-amount-info";
 import SelectISAAmountInput from "../select-isa-amount-input/select-isa-amount-input";
-import SelectISAReview from "../select-isa-review";
-import LoadingSpinner from "../loading-spinner/loading-spinner";
+import SelectISAReview from "../select-isa-review/select-isa-review";
+import LoadingSpinner from "../../common/loading-spinner/loading-spinner";
 
 const steps = ['Select an ISA fund', 'Choose amount to invest', 'Review'];
 

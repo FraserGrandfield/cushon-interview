@@ -1,4 +1,4 @@
-import Header from "~/components/header/header";
+import Header from "~/components/common/header/header";
 
 
 export default function WorkplaceISA() {

@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import SelectISAFundInfo from "./select-isa-fund-info";
 import { SelectedFund } from "../select-isa-stepper/select-isa-stepper";
-import { mockFunds } from "../../mockFunds";
+import { mockFunds } from "../../../mockFunds";
 
 describe("SelectISAFundInfo component", () => {
 

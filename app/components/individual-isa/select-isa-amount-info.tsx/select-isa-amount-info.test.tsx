@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import SelectISAAmountInfo from "./select-isa-amount-info";
-import { mockFunds } from "../../mockFunds";
+import { mockFunds } from "../../../mockFunds";
 import { Fund } from "~/api";
 
 describe("SelectISAAmountInfo component", () => {

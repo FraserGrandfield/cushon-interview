@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Fund, getFunds } from "~/api";
-import Header from "~/components/header/header";
-import LoadingSpinner from "~/components/loading-spinner/loading-spinner";
-import SelectISAStepper from "~/components/select-isa-stepper/select-isa-stepper";
+import Header from "~/components/common/header/header";
+import LoadingSpinner from "~/components/common/loading-spinner/loading-spinner";
+import SelectISAStepper from "~/components/individual-isa/select-isa-stepper/select-isa-stepper";
 
 /**
  * Individual ISA selection page.

@@ -1,6 +1,6 @@
 import { Card, CardContent, Divider } from "@mui/material"
 import { Fund } from "~/api"
-import SelectedFundsInfo from "../selected-funds-info";
+import SelectedFundsInfo from "../selected-funds-info/selected-funds-info";
 
 interface SelectISAAmountInfoProps {
     children: React.ReactNode;

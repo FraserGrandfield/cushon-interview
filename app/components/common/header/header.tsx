@@ -1,5 +1,5 @@
 import { AppBar, Box, Link, Toolbar } from "@mui/material";
-import logo from "../../../assests/logo.svg";
+import logo from "../../../../assests/logo.svg";
 
 interface Pages {
     label: string;

@@ -8,7 +8,7 @@ import {
 } from "react-router";
 import type { Route } from "./+types/root";
 import "./app.css";
-import Header from "./components/header/header";
+import Header from "./components/common/header/header";
 import { useEffect } from "react";
 import { setup } from "./setup";
 import { createTheme, ThemeProvider } from "@mui/material";
