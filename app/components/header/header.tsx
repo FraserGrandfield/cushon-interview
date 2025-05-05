@@ -27,10 +27,10 @@ const pages: Pages[] = [
 export default function Header({ children }: React.PropsWithChildren) {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" style={{ backgroundColor: "var(--primary-backround)" }}>
+            <AppBar position="static" sx={{ padding: "20px 0" }}>
                 <Toolbar>
                 <img
-                    style={{ width: "50px", padding: "10px 2px" }}
+                    style={{ width: "50px" }}
                     src={ logo }
                     alt="Natwest logo"
                 />
@@ -38,7 +38,7 @@ export default function Header({ children }: React.PropsWithChildren) {
                     <Link
                         color="inherit"
                         href="/"
-                        sx={{ fontWeight: 700, fontSize: "40px" }}
+                        sx={{ fontWeight: 700, fontSize: "40px", paddingLeft: "15px" }}
                         underline="hover"
                     >
                         NatWest Cushon
