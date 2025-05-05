@@ -1,6 +1,6 @@
 import { Box, Stepper, Step, StepLabel, Button } from "@mui/material";
 import { SetStateAction, useState } from "react";
-import { Fund, setFund } from "~/api";
+import { Fund, setUserFund } from "~/api";
 import SelectISATabs from "../select-isa-tabs/select-isa-tabs";
 import SelectISAAmountInfo from "../select-isa-amount-info.tsx/select-isa-amount-info";
 import SelectISAAmountInput from "../select-isa-amount-input/select-isa-amount-input";
@@ -38,7 +38,7 @@ export default function SelectISAStepper({ funds }: SelectISAStepperProps) {
 
     const onSubmit = () => {
         setIsLoading(true);
-        setFund("3910ce07-4462-4782-b388-670c8dd37164", selectedFund.id, selectedFund.amount)
+        setUserFund("3910ce07-4462-4782-b388-670c8dd37164", selectedFund.id, selectedFund.amount)
             .then(() => setIsLoading(false));
         document.location.href="/";
     }

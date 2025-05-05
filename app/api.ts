@@ -12,31 +12,32 @@ export interface Fund {
     summary: string;
     riskLeveLevel: FundRiskLevel;
     predicted: {
-        year: number,
-        percentage: number
+        year: number;
+        percentage: number;
     }[]
-    portfolioDescription: string,
+    portfolioDescription: string;
     portfolio: {
-        name: string,
-        percentage: number,
-        about: string
-    }[],
+        name: string;
+        percentage: number;
+        about: string;
+    }[];
     expectedPercentageIncrease: {
-        mostLikely: number,
-        good: number,
-        bad: number
+        mostLikely: number;
+        good: number;
+        bad: number;
     }
 }
 
 export interface UserFund {
-    fundId: string,
-    amountInvested: number
+    fundId: string;
+    amountInvested: number;
+    currentValue: number;
 }
 
 export interface User {
-    id: string,
-    name: string,
-    funds: UserFund[]
+    id: string;
+    name: string;
+    funds: UserFund[];
 }
 
 /**
@@ -46,7 +47,7 @@ export interface User {
  */
 export async function getFunds(): Promise<Fund[]> {
     return new Promise((resolve) => {
-        const dbRequest = indexedDB.open("cushon")
+        const dbRequest = indexedDB.open("cushon");
         dbRequest.onsuccess = () => {
             const request = dbRequest.result.transaction('funds').objectStore('funds').getAll();
             request.onsuccess = () => {
@@ -66,11 +67,11 @@ export async function getFunds(): Promise<Fund[]> {
  * @param { string } userId users id to add investment to
  * @param { string } fundId id of fund user is investing into
  * @param { number } amount amount to invest
- * @returns 
+ * @returns { Promise<void> }
  */
-export async function setFund(userId: string, fundId: string, amount: number): Promise<void> {
+export async function setUserFund(userId: string, fundId: string, amount: number): Promise<void> {
     return new Promise((resolve) => {
-        const dbRequest = indexedDB.open("cushon")
+        const dbRequest = indexedDB.open("cushon");
         dbRequest.onsuccess = () => {
             const objectStore = dbRequest.result.transaction('users', "readwrite").objectStore('users');
             const request = objectStore.get(userId);
@@ -80,7 +81,7 @@ export async function setFund(userId: string, fundId: string, amount: number): P
                 if (fundIndex > -1) {
                     user.funds[fundIndex].amountInvested += amount;
                 } else {
-                    user.funds.push({ fundId, amountInvested: amount });
+                    user.funds.push({ fundId, amountInvested: amount, currentValue: amount + 20 });
                 }
                 const updateRequest = objectStore.put(user);
                 updateRequest.onsuccess = () => {
@@ -94,6 +95,50 @@ export async function setFund(userId: string, fundId: string, amount: number): P
             request.onerror = (e) => {
                 console.log("Error:", e);
                 resolve();
+            }
+        }
+    });
+}
+
+/**
+ * Get a user by its id
+ * 
+ * @param userId of user
+ * @returns { Promise<User> } User object of the id
+ */
+export async function getUserById(userId: string): Promise<User> {
+    return new Promise((resolve) => {
+        const dbRequest = indexedDB.open("cushon");
+        dbRequest.onsuccess = () => {
+            const objectStore = dbRequest.result.transaction('users').objectStore('users');
+            const request = objectStore.get(userId);
+            request.onsuccess = () => {
+                resolve(request.result);
+            };
+            request.onerror = (e) => {
+                console.log("Error:", e);
+            }
+        }
+    });
+}
+
+/**
+ * Get a fund by its id
+ * 
+ * @param fundId of fund
+ * @returns  { Promise<Fund> } Fund object of the id
+ */
+export async function getFundById(fundId: string): Promise<Fund> {
+    return new Promise((resolve) => {
+        const dbRequest = indexedDB.open("cushon");
+        dbRequest.onsuccess = () => {
+            const objectStore = dbRequest.result.transaction('funds').objectStore('funds');
+            const request = objectStore.get(fundId);
+            request.onsuccess = () => {
+                resolve(request.result);
+            };
+            request.onerror = (e) => {
+                console.log("Error:", e);
             }
         }
     });

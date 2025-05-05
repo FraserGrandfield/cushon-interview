@@ -14,6 +14,10 @@ const pages: Pages[] = [
     {
         label: "Workplace ISAs",
         route: "/workplace-isa"
+    },
+    {
+        label: "Profile",
+        route: "/profile"
     }
 ];
 
