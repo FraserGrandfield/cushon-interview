@@ -58,7 +58,9 @@ export default function App() {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-      <Outlet />
+      <Header>
+        <Outlet />
+      </Header>
     </ThemeProvider>
   ) 
 }

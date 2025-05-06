@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getUserById, UserFund } from "~/api";
-import FullScreenSpinnerContainer from "~/components/common/full-screen-spinner-container/full-screen-spinner-container";
-import Header from "~/components/common/header/header";
+import FullScreenSpinnerContainer from "~/components/common/full-screen-spinner-handler/full-screen-spinner-handler";
 import LoadingSpinner from "~/components/common/loading-spinner/loading-spinner";
 import ProfileFunds from "~/components/profile/profile-funds/profile-funds";
 
@@ -17,8 +16,8 @@ export default function Profile() {
 
     const loadUser = async () => {
         const userResponse = await getUserById("3910ce07-4462-4782-b388-670c8dd37164");
-        setIsLoading(false);
         setUserFunds(userResponse.funds);
+        setIsLoading(false);
     }
 
     useEffect(() => {
@@ -26,12 +25,8 @@ export default function Profile() {
     }, []);
 
     return (
-        <Header>
-            {isLoading ?
-            <FullScreenSpinnerContainer>
-                <LoadingSpinner size={"250px"}/>
-            </FullScreenSpinnerContainer> :
-            <ProfileFunds userFunds={ userFunds }/>}
-        </Header>
+        <FullScreenSpinnerContainer isLoading={ isLoading }>
+            <ProfileFunds userFunds={ userFunds }/>
+        </FullScreenSpinnerContainer>
     )
 }
